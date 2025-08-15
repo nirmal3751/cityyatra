@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>City Yatra – Explore 100 Cities</title>
+  <link rel="stylesheet" href="all-cities.css">
+</head>
+<body>
+
+  <h1>Explore Indian Cities</h1>
+  <input type="text" id="search-bar" placeholder="Search city...">
+  <ul id="suggestions"></ul>
+
+  <div id="city-list">
+    <!-- Featured 6 Cities -->
+    <div class="city-item">Bhopal</div>
+    <div class="city-item">Indore</div>
+    <div class="city-item">Mumbai</div>
+    <div class="city-item">Delhi</div>
+    <div class="city-item">Chennai</div>
+    <div class="city-item">Bengaluru</div>
+
+    <!-- Remaining 94 Cities -->
+    <div class="city-item">Hyderabad</div>
+    <div class="city-item">Ahmedabad</div>
+    <div class="city-item">Kolkata</div>
+    <div class="city-item">Surat</div>
+    <div class="city-item">Pune</div>
+    <div class="city-item">Kanpur</div>
+    <div class="city-item">Nagpur</div>
+    <div class="city-item">Thane</div>
+    <div class="city-item">Visakhapatnam</div>
+    <div class="city-item">Pimpri-Chinchwad</div>
+    <div class="city-item">Patna</div>
+    <div class="city-item">Vadodara</div>
+    <div class="city-item">Ghaziabad</div>
+    <div class="city-item">Ludhiana</div>
+    <div class="city-item">Agra</div>
+    <div class="city-item">Nashik</div>
+    <div class="city-item">Faridabad</div>
+    <div class="city-item">Meerut</div>
+    <div class="city-item">Rajkot</div>
+    <div class="city-item">Kalyan-Dombivli</div>
+    <div class="city-item">Vasai-Virar</div>
+    <div class="city-item">Varanasi</div>
+    <div class="city-item">Srinagar</div>
+    <div class="city-item">Aurangabad</div>
+    <div class="city-item">Dhanbad</div>
+    <div class="city-item">Amritsar</div>
+    <div class="city-item">Navi Mumbai</div>
+    <div class="city-item">Prayagraj</div>
+    <div class="city-item">Howrah</div>
+    <div class="city-item">Ranchi</div>
+    <div class="city-item">Jabalpur</div>
+    <div class="city-item">Gwalior</div>
+    <div class="city-item">Coimbatore</div>
+    <div class="city-item">Kozhikode</div>
+    <div class="city-item">Malappuram</div>
+    <div class="city-item">Thrissur</div>
+    <div class="city-item">Kochi</div>
+    <div class="city-item">Madurai</div>
+    <div class="city-item">Vijayawada</div>
+    <div class="city-item">Kollam</div>
+    <div class="city-item">Kannur</div>
+    <div class="city-item">Tiruppur</div>
+    <div class="city-item">Thiruvananthapuram</div>
+    <div class="city-item">Asansol</div>
+    <div class="city-item">Jamshedpur</div>
+    <div class="city-item">Jodhpur</div>
+    <div class="city-item">Kota</div>
+    <div class="city-item">Allahabad</div>
+    <div class="city-item">Bareilly</div>
+    <div class="city-item">Aligarh</div>
+    <div class="city-item">Moradabad</div>
+    <div class="city-item">Mysore</div>
+    <div class="city-item">Bhubaneswar</div>
+    <div class="city-item">Raipur</div>
+    <div class="city-item">Durg-Bhilainagar</div>
+    <div class="city-item">Amravati</div>
+    <div class="city-item">Guntur</div>
+    <div class="city-item">Warangal</div>
+    <div class="city-item">Siliguri</div>
+    <div class="city-item">Dehradun</div>
+    <div class="city-item">Noida</div>
+    <div class="city-item">Firozabad</div>
+    <div class="city-item">Ujjain</div>
+    <div class="city-item">Belgaum</div>
+    <div class="city-item">Mangalore</div>
+    <div class="city-item">Salem</div>
+    <div class="city-item">Tirunelveli</div>
+    <div class="city-item">Malegaon</div>
+    <div class="city-item">Gaya</div>
+    <div class="city-item">Jalgaon</div>
+    <div class="city-item">Udaipur</div>
+    <div class="city-item">Davanagere</div>
+    <div class="city-item">Nanded</div>
+    <div class="city-item">Ajmer</div>
+    <div class="city-item">Akola</div>
+    <div class="city-item">Gulbarga</div>
+    <div class="city-item">Jhansi</div>
+    <div class="city-item">Tumkur</div>
+    <div class="city-item">Nellore</div>
+    <div class="city-item">Jalandhar</div>
+    <div class="city-item">Shivamogga</div>
+    <div class="city-item">Sangli</div>
+    <div class="city-item">Cuttack</div>
+    <div class="city-item">Bhavnagar</div>
+    <div class="city-item">Panipat</div>
+    <div class="city-item">Rohtak</div>
+    <div class="city-item">Karnal</div>
+    <div class="city-item">Rewa</div>
+    <div class="city-item">Satna</div>
+    <div class="city-item">Bilaspur</div>
+    <div class="city-item">Bokaro</div>
+    <div class="city-item">Muzaffarpur</div>
+    <div class="city-item">Saharanpur</div>
+    <div class="city-item">Mathura</div>
+  </div>
+
+  <script>
+    const cities = Array.from(document.querySelectorAll('.city-item')).map(item => item.textContent);
+    const searchBar = document.getElementById('search-bar');
+    const suggestions = document.getElementById('suggestions');
+    const cityItems = document.querySelectorAll('.city-item');
+
+    searchBar.addEventListener('input', () => {
+      const query = searchBar.value.toLowerCase();
+      suggestions.innerHTML = "";
+
+      if (query.length === 0) {
+        cityItems.forEach(item => item.style.display = 'block');
+        return;
+      }
+
+      const matches = cities.filter(city => city.toLowerCase().includes(query));
+      matches.forEach(city => {
+        const li = document.createElement('li');
+        li.textContent = city;
+        li.addEventListener('click', () => {
+          searchBar.value = city;
+          suggestions.innerHTML = "";
+          cityItems.forEach(item => {
+            item.style.display = item.textContent.toLowerCase() === city.toLowerCase() ? 'block' : 'none';
+          });
+        });
+        suggestions.appendChild(li);
+      });
+    });
+  </script>
+<script src="js/all-cities.js"></script>
+
+</body>
+</html>

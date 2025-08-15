@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Andhra Pradesh – City Yatra</title>
+  <link rel="stylesheet" href="../css/home.css">
+  <style>
+    /* 🔝 Modern Header */
+    .state-header {
+      background: linear-gradient(to right, #ffcc80, #ffe0b2);
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 4px solid #ff9800;
+    }
+
+    .state-header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #e65100;
+    }
+
+    .state-header p {
+      font-size: 1rem;
+      font-style: italic;
+      color: #6d4c41;
+      margin-top: 0.5rem;
+    }
+
+    /* 📜 State Info Box */
+    .state-info {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #fff8e1;
+      border-left: 5px solid #ffcc00;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* 🏙️ City Grid */
+    .featured-cities {
+      padding: 2rem;
+    }
+
+    .city-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .city-card {
+      background-color: #fff3e0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      padding: 1rem;
+      transition: transform 0.3s;
+    }
+
+    .city-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .city-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+
+    .city-card h3 {
+      margin: 0.5rem 0 0.2rem;
+      font-size: 1.2rem;
+      color: #e65100;
+    }
+
+    .city-card p {
+      font-size: 0.95rem;
+      color: #6d4c41;
+    }
+
+    /* 🔁 Back Button Styling */
+    .back-links {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .back-links a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 10px 20px;
+      background-color: #ffcc00;
+      color: #333;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .back-links a:hover {
+      background-color: #ffe082;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔝 Header -->
+  <div class="state-header">
+    <h1>Andhra Pradesh</h1>
+    <p>Land of Temples, Coastlines & Culture</p>
+  </div>
+
+  <!-- 📜 State Info -->
+  <div class="state-info">
+    Andhra Pradesh is known for its rich cultural heritage, historic temples, and scenic coastline along the Bay of Bengal. It is home to classical dance forms like Kuchipudi and vibrant festivals like Ugadi and Sankranti. The state blends tradition with modernity, offering soulful experiences from hill stations to heritage towns.
+  </div>
+
+  <!-- 🏙️ Top Cities -->
+  <section class="featured-cities">
+    <h2>Top Cities in Andhra Pradesh</h2>
+    <div class="city-grid">
+      <a href="../cities/vijayawada.html" class="city-card">
+        <img src="../images/Vijayawada.jpg" alt="Vijayawada">
+        <h3>Vijayawada</h3>
+        <p>Spiritual & Commercial Hub</p>
+      </a>
+      <a href="../cities/visakhapatnam.html" class="city-card">
+        <img src="../images/visakhapatnam.jpg" alt="Visakhapatnam">
+        <h3>Visakhapatnam</h3>
+        <p>Coastal Beauty & Industry</p>
+      </a>
+      <a href="../cities/tirupati.html" class="city-card">
+        <img src="../images/tirupati.jpg" alt="Tirupati">
+        <h3>Tirupati</h3>
+        <p>Temple Town of India</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- 🔁 Back to Home -->
+  <div class="back-links">
+    <a href="../index.html">🏠 Back to Home</a>
+  </div>
+
+</body>
+</html>
