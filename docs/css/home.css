@@ -336,3 +336,19 @@ header .tagline {
 /* 📱 Mobile Responsive for Festivals */
 @media (max-width: 768px) {
   .festival-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .festival-card {
+    width: 100%;
+    max-width: none;
+  }
+
+  .festivals-section h2 {
+    font-size: 1.6em;
+  }
+}
+
