@@ -1,33 +1,11 @@
-footer {
-  background: linear-gradient(to right, #ffcc80, #f8bbd0);
-  color: #4e342e;
-  text-align: center;
-  padding: 1rem;
-  font-style: italic;
-  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-}
-.main-content {
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 960px;
-  margin: 30px auto;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
-}
-body {
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(135deg, #fff3e0, #ffe0b2, #ffccbc, #f8bbd0);
-  background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
-  font-family: 'Segoe UI', sans-serif;
-}
 /* 🌍 Global Styles */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+  background: linear-gradient(135deg, #fff3e0, #ffe0b2, #ffccbc, #f8bbd0);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
   color: #333;
 }
 
@@ -84,37 +62,45 @@ header .tagline {
 
 /* 🌏 Explore Button Wrapper */
 .explore-button-wrapper {
-  background-color: #fff;
-  text-align: center;
-  padding: 2rem 1rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
 }
 
 /* 🔥 Explore Button Styling */
 #explore-button {
-  background-color: #ffcc00;
-  color: #333;
-  font-size: 1.2em;
-  padding: 15px 30px;
+  background: linear-gradient(135deg, #ff6f00, #ffca28);
+  background-size: 300% 300%;
+  animation: gradientShift 12s ease infinite;
+  color: white;
+  font-size: 2.4rem;
+  padding: 26px 52px;
+  font-weight: 700;
   border: none;
-  border-radius: 8px;
+  border-radius: 60px;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.25);
   cursor: pointer;
-  transition: transform 0.2s, background-color 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  letter-spacing: 1px;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 16px;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeIn 0.8s ease forwards;
   animation-delay: 0.3s;
+  text-shadow: 0 0 6px rgba(255,255,255,0.6);
 }
 
 #explore-button:hover {
-  transform: scale(1.05);
-  background-color: #ffdb4d;
+  transform: scale(1.08);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+  background: linear-gradient(135deg, #ff8f00, #ffd54f);
 }
 
 #explore-button .emoji {
-  display: inline-block;
+  font-size: 2.4rem;
   transition: transform 0.5s ease;
 }
 
@@ -141,8 +127,6 @@ header .tagline {
   gap: 15px;
   margin-top: 30px;
   padding: 0 20px;
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .state-link {
@@ -213,87 +197,6 @@ header .tagline {
   color: #666;
 }
 
-/* 📦 Info Box */
-.info-box {
-  margin: 2rem auto;
-  padding: 1rem;
-  background-color: #fff3e0;
-  border-left: 5px solid #ff6600;
-  max-width: 600px;
-  font-size: 1rem;
-  border-radius: 5px;
-}
-
-/* 📬 About & Contact */
-.about-contact {
-  margin-top: 3rem;
-  padding: 2rem;
-  background-color: #fff8f0;
-  border-left: 5px solid #ff6600;
-  border-radius: 8px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-.about-contact h2 {
-  color: #e65100;
-  margin-bottom: 1rem;
-}
-
-.about-contact p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
-/* 📱 Mobile Responsive */
-@media (max-width: 768px) {
-  header {
-    padding: 2rem 1rem;
-    background-position: top;
-  }
-
-  .intro-banner {
-    font-size: 0.85rem;
-    padding: 0.5rem;
-    margin: 1rem;
-  }
-
-  #explore-button {
-    font-size: 1rem;
-    padding: 12px 20px;
-    width: 90%;
-  }
-
-  .state-grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    padding: 0 10px;
-    gap: 10px;
-  }
-
-  .city-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .city-card {
-    width: 90%;
-    max-width: 300px;
-  }
-
-  .about-contact {
-    padding: 1.5rem 1rem;
-    margin: 2rem 1rem;
-  }
-
-  .info-box {
-    padding: 1rem;
-    margin: 1.5rem 1rem;
-  }
-}
-
 /* 🌸 Upcoming Festivals Section */
 .festivals-section {
   padding: 40px 20px;
@@ -357,22 +260,55 @@ header .tagline {
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* 📱 Mobile Responsive for Festivals */
-@media (max-width: 768px) {
-  .festival-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    padding: 0 10px;
-  }
-
-  .festival-card {
-    width: 100%;
-    max-width: none;
-  }
-
-  .festivals-section h2 {
-    font-size: 1.6em;
-  }
+/* 📬 About & Contact */
+.about-contact {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #fff8f0;
+  border-left: 5px solid #ff6600;
+  border-radius: 8px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
+.about-contact h2 {
+  color: #e65100;
+  margin-bottom: 1rem;
+}
+
+.about-contact p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* 📦 Info Box */
+.info-box {
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fff3e0;
+  border-left: 5px solid #ff6600;
+  max-width: 600px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  header {
+    padding: 2rem 1rem;
+    background-position: top;
+  }
+
+  .intro-banner {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+    margin: 1rem;
+  }
+
+  .state-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    padding: 0 10px;
+    gap: 
