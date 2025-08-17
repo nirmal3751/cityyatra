@@ -257,6 +257,28 @@ header .tagline {
     font-size: 1.6em;
   }
 }
+/* 📱 Mobile Image Fix for Top Places */
+.place-card img {
+  width: 100%;
+  height: auto;
+  max-height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .place-card img {
+    max-height: 120px;
+  }
+
+  .place-card h3 {
+    font-size: 16px;
+  }
+
+  .place-card p {
+    font-size: 13px;
+  }
+}
 
 
 /* 🌸 Upcoming Festivals Section */
