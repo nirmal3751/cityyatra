@@ -19,7 +19,6 @@ header {
   text-align: center;
   position: relative;
 }
-
 header::before {
   content: "";
   position: absolute;
@@ -27,19 +26,16 @@ header::before {
   background: rgba(0, 0, 0, 0.4);
   z-index: 0;
 }
-
 header h1,
 header .creator,
 header .tagline {
   position: relative;
   z-index: 1;
 }
-
 .creator {
   font-size: 1rem;
   margin-top: 0.5rem;
 }
-
 .tagline {
   font-style: italic;
   margin-top: 0.5rem;
@@ -92,18 +88,15 @@ header .tagline {
   animation-delay: 0.3s;
   text-shadow: 0 0 6px rgba(255,255,255,0.6);
 }
-
 #explore-button:hover {
   transform: scale(1.08);
   box-shadow: 0 16px 40px rgba(0,0,0,0.3);
   background: linear-gradient(135deg, #ff8f00, #ffd54f);
 }
-
 #explore-button .emoji {
   font-size: 2.4rem;
   transition: transform 0.5s ease;
 }
-
 #explore-button:hover .emoji {
   transform: rotate(20deg);
 }
@@ -128,7 +121,6 @@ header .tagline {
   margin-top: 30px;
   padding: 0 20px;
 }
-
 .state-link {
   background-color: white;
   border: 1px solid #ddd;
@@ -140,11 +132,9 @@ header .tagline {
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   transition: background-color 0.2s;
 }
-
 .state-link:hover {
   background-color: #f0f0f0;
 }
-
 .hidden {
   display: none !important;
 }
@@ -154,7 +144,6 @@ header .tagline {
   padding: 2rem;
   text-align: center;
 }
-
 .city-grid {
   display: flex;
   flex-wrap: wrap;
@@ -162,7 +151,6 @@ header .tagline {
   gap: 1.5rem;
   margin-top: 1rem;
 }
-
 .city-card {
   background-color: white;
   border-radius: 8px;
@@ -174,11 +162,9 @@ header .tagline {
   text-decoration: none;
   color: inherit;
 }
-
 .city-card:hover {
   transform: scale(1.05);
 }
-
 .city-card img {
   width: 100%;
   height: 120px;
@@ -186,16 +172,92 @@ header .tagline {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
-
 .city-card h3 {
   margin: 0.5rem 0 0;
 }
-
 .city-card p {
   margin: 0.5rem;
   font-size: 0.9rem;
   color: #666;
 }
+/* 🏞️ Top Places Section */
+.top-places-section {
+  padding: 40px 20px;
+  background-color: #fffef8;
+  text-align: center;
+  border-top: 2px solid #f0e0d0;
+  margin-bottom: 40px;
+}
+
+.top-places-section h2 {
+  font-family: 'Georgia', serif;
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #6d4c41;
+}
+
+/* 🖼 Places Grid */
+.places-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* 🧱 Place Card */
+.place-card {
+  width: 220px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  border: 1px solid #f0e0d0;
+}
+
+.place-card:hover {
+  transform: scale(1.05);
+}
+
+.place-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.place-card h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+  color: #6d4c41;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.place-card p {
+  font-size: 14px;
+  padding: 0 10px 10px;
+  color: #555;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .places-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .place-card {
+    width: 100%;
+  }
+
+  .top-places-section h2 {
+    font-size: 1.6em;
+  }
+}
+
 
 /* 🌸 Upcoming Festivals Section */
 .festivals-section {
@@ -205,7 +267,6 @@ header .tagline {
   border-top: 2px solid #f0e0d0;
   margin-bottom: 40px;
 }
-
 .festivals-section h2 {
   font-family: 'Georgia', serif;
   font-size: 2em;
@@ -232,7 +293,6 @@ header .tagline {
   transition: transform 0.3s ease;
   border: 1px solid #f0e0d0;
 }
-
 .festival-card:hover {
   transform: scale(1.05);
 }
@@ -272,12 +332,10 @@ header .tagline {
   margin-right: auto;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
-
 .about-contact h2 {
   color: #e65100;
   margin-bottom: 1rem;
 }
-
 .about-contact p {
   font-size: 1rem;
   line-height: 1.6;
@@ -301,13 +359,11 @@ header .tagline {
     padding: 2rem 1rem;
     background-position: top;
   }
-
   .intro-banner {
     font-size: 0.85rem;
     padding: 0.5rem;
     margin: 1rem;
   }
-
   .state-grid {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     padding: 0 10px;
